@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>test</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="js/html2canvas.min.js"></script>
+	<script src="js/qrcode.min.js"></script>
+</head>
+<body>
+	<header id="header" class="">
+		<div class="head-title">分享卡生成器</div>
+		<div class="head-content">
+			<p>将图片、标题、摘要快速整合成信息卡片，添加链接自动生成二维码</p>
+			<p>不需要调用后台，全前端方案更轻更快</p>
+			<a href="">
+				<img class="github" src="img/github-logo.png"></img>
+			</a>
+		</div>
+	</header>
+	<main>
+		<div class="editor">
+			<div class="input-card">
+				<div class="cover-sel">
+					<input type="file" id="filestyle" onchange="uploadImg(this)" style="position: absolute; clip: rect(0px, 0px, 0px, 0px);" />
+					<label for="filestyle" class="btn filestyle" >
+						<span class="buttonText">选择图片</span>
+					</label>
+					<div style="text-align: center;padding: .75rem;color: #435055; font-size: .85rem">
+						或输入链接
+					</div>
+					<input type="text" onchange="getImg(this.value)" class="text-input">
+				</div>
+
+				<div class="title-edit">
+					<h1>输入标题</h1>
+					<input type="text" onchange="getTilte(this.value)" class="text-input">
+				</div>
+
+				<div class="content-edit">
+					<h1>输入摘要</h1>
+					<textarea name="content" onchange="getContent(this.value)" class="text-input"></textarea>
+				</div>
+
+				<div class="qrcode-edit">
+					<h1>输入二维码内容</h1>
+					<h6 style="color: red; margin-bottom: .3rem; font-weight: 400;">* 留空则不显示二维码</h6>
+					<input type="text" onchange="getQRcode(this.value)" class="text-input">
+				</div>
+
+				<a class="down" download="card">
+					<div class="btn download-btn">下载</div>
+				</a>
+			</div>
+		</div>
+		<div class="viewer">
+			<div id="card">
+				<div id="cover"></div>
+				<div class="card-main">
+					<div class="title" id="card-title">标题</div>
+					<div class="content" id="card-content">这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容</div>
+				</div>
+				<div class="card-qrcode" id="card-qrcode">
+					<div id="qrcode"></div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<div class="example">
+		<div class="example-title">例子</div>
+		<img src="img/example.jpg" alt="">
+	</div>
+	<div class="about">
+		<div class="about-title">关于</div>
+		<div class="about-content">
+			基于以下库：
+			<ul>
+				<li>
+					<a href="https://github.com/niklasvh/html2canvas" title="html2canvas.js">html2canvas.js</a>：用于生成图片
+				</li>
+				<li>
+					<a href="https://davidshimjs.github.io/qrcodejs/" title="qrcode.js">qrcode.js</a>：用于生成二维码
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<footer>
+		<a class="aboutme" href="https://zhih.me" title="底噪博客">底噪</a>&nbsp;&copy; 2018
+	</footer>
+
+	<script src="main.js"></script>
+</body>
+</html>

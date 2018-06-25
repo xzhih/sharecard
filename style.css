@@ -1,0 +1,279 @@
+/*
+* @Author: xzhih
+* @Date:   2018-06-22 20:54:22
+* @Last Modified by:   xzhih
+* @Last Modified time: 2018-06-26 01:54:16
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, Arial, sans-serif;
+	background-color: #f4f8fb;
+	font-size: 62.5%;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+header {
+	background: white;
+	padding: 4.8rem 0 4.2rem;
+	text-align: center;
+}
+
+.head-title {
+	font-size: 3.2rem;
+}
+
+.head-content {
+	color: #555;
+	padding: 1.8rem 2.6rem 0;
+	font-size: 1.3rem;
+	line-height: 1.75;
+}
+
+.github {
+	margin-top: 1rem;
+	height: 2rem;
+	width: 2rem;
+}
+
+main {
+	overflow: auto;
+	padding: 2rem;
+	width: 70%;
+	margin: 5rem auto;
+}
+
+.viewer {
+	width: 50%;
+	float: right;
+}
+
+.editor {
+	width: 50%;
+	float: left;
+}
+
+#card {
+	background: white;
+	-webkit-box-shadow: #e3e3e3 0px 0px 20px;
+	        box-shadow: #e3e3e3 0px 0px 20px;
+	border-radius: 5px;
+	width: 320px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#cover {
+	overflow: hidden;
+	height: 200px;
+	width: auto;
+	background: 50%/cover no-repeat #c5d2d9;
+}
+
+.card-main {
+	min-height: 200px;
+	padding: 16px 24px;
+}
+
+.title {
+	font-size: 20px;
+	padding: 12px 0;
+	font-weight: 400;
+}
+
+.content {
+	font-size: 14px;
+	padding-bottom: 10px;
+	text-align: justify;
+	word-break: break-all;
+	font-weight: 300;
+	line-height: 1.45
+}
+
+.content:after {
+	content: ' ···'
+}
+
+.card-qrcode {
+	display: none;
+	height: 70px;
+	bottom: 0;
+	position: relative;
+}
+
+#qrcode {
+	height: 50px;
+	width: 50px;
+	background: #c5d2d9;
+	margin: 20px auto;
+	margin-top: 0
+}
+
+.input-card {
+	margin: 0 auto;
+	width: 320px;
+}
+
+h1 {
+	color: #435055;
+	font-size: 1rem;
+	margin: .2rem 0
+}
+
+.btn {
+	display: inline-block;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	border: 1px solid transparent;
+	padding: .5rem;
+	font-size: 1rem;
+	line-height: 1.25;
+	border-radius: .25rem;
+	color: #fff;
+	background-color: #868e96;
+	border-color: #868e96;
+}
+
+.cover-sel,
+.title-edit,
+.content-edit,
+.qrcode-edit {
+	margin-bottom: 1rem;
+	
+}
+
+.text-input {
+	background-color: white;
+	padding: .5rem;
+	font-size: 1rem;
+	line-height: 1.25;
+	border-radius: .25rem;
+	border: 1px solid #868e96;
+}
+
+textarea {
+	min-height: 3rem;
+}
+
+.filestyle,
+.text-input,
+.download-btn {
+	width: 300px
+}
+
+.example {
+	padding: 4.5rem 0;
+	background: white;
+}
+
+.example img {
+	width: 100%;
+}
+
+.example-title {
+	margin-bottom: 3rem
+}
+
+.about {
+	padding: 4.5rem 0;
+}
+
+.about-title, 
+.example-title {
+	text-align: center;
+	font-size: 2.6rem
+}
+
+.about-content{
+	font-size: 1.2rem;
+	margin: 3rem auto;
+	width: 60%;
+}
+
+ul, li {
+	display: block;
+	padding: .65rem;
+}
+
+footer {
+	text-align: center;
+	font-size: .7rem;
+	padding: 3rem 0 3rem;
+	color: #868e96;
+}
+
+footer > a {
+	text-decoration: none;
+
+	color: #868e96;
+}
+
+@media screen and (max-width: 1309px) {
+	main {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 809px) {
+	.viewer {
+		width: 100%;
+		float: none;
+	}
+
+	.editor {
+		margin-bottom: 5rem;
+		width: 100%;
+		float: none;
+	}
+
+	.viewer {
+		margin-bottom: 2rem;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	main {
+		width: 100%;
+		padding: 0;
+		margin: 3rem 0
+	}
+
+	header {
+		padding: 2rem 0 1.5rem;
+	}
+
+	.head-title,
+	.about-title {
+		font-size: 2rem
+	}
+
+	.head-content {
+		font-size: 1rem;
+		padding: 1rem
+	}
+
+	.editor {
+		margin-bottom: 3rem
+	}
+	
+	.about {
+		padding: 2rem 0
+	}
+
+	.about-content {
+		margin: 2rem 0;
+		padding: 0 1.5rem;
+		width: calc(100% - 3rem);
+	}
+
+}
+
