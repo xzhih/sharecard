@@ -2,7 +2,7 @@
 * @Author: xzhih
 * @Date:   2018-06-22 20:52:48
 * @Last Modified by:   xzhih
-* @Last Modified time: 2018-06-26 02:19:26
+* @Last Modified time: 2018-12-18 18:32:49
 */
 
 // 从 URL 获取图片
@@ -28,7 +28,7 @@ const uploadImg = e => {
 	var reader = new FileReader()
 	reader.readAsDataURL(img)
 	reader.onloadend = function() {
-		document.getElementById('cover').style.backgroundImage = 'url(' + reader.result + ')'
+		document.getElementById('cover').src = reader.result
 		makeImg()
 	}
 }
@@ -55,8 +55,8 @@ const getQRcode = QRcode => {
 
 	document.getElementById('card-qrcode').style.display = 'block'
 	var qrcode = new QRCode(document.getElementById('qrcode'), {
-		width: 50,
-		height: 50,
+		width: 54,
+		height: 54,
 		colorDark: '#3d4752',
 		colorLight: '#ffffff',
 		correctLevel: QRCode.CorrectLevel.L
