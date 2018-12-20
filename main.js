@@ -2,7 +2,7 @@
 * @Author: xzhih
 * @Date:   2018-06-22 20:52:48
 * @Last Modified by:   xzhih
-* @Last Modified time: 2018-12-18 18:32:49
+* @Last Modified time: 2018-12-20 11:44:30
 */
 
 // 从 URL 获取图片
@@ -75,6 +75,6 @@ const makeImg = () => {
 		scale: 3
 	})
 	.then(canvas => {
-		document.querySelector('.down').setAttribute('href', canvas.toDataURL())
+		document.querySelector('.down').setAttribute('href', canvas.toDataURL("image/jpeg", 0.5))
 	})
 }
